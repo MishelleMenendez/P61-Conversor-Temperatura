@@ -18,6 +18,11 @@ public:
 public slots:
     void cent2fahr(int grados);
     void fahr2cent(int grados);
+    void cent2Kelv(int grados);
+    void Kelv2cent(int grados);
+    void fahr2Kelv(int grados);
+    void Kelv2fahr(int grados);
+
 
 private:
     Ui::Conversor *ui;

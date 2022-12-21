@@ -85,6 +85,35 @@
         </layout>
        </widget>
       </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_3">
+        <property name="title">
+         <string>Kelvin</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <widget class="QLCDNumber" name="outKelv">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(152, 175, 62);</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDial" name="inKelv">
+           <property name="minimum">
+            <number>255</number>
+           </property>
+           <property name="maximum">
+            <number>372</number>
+           </property>
+           <property name="value">
+            <number>255</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
      </layout>
     </widget>
    </item>
@@ -139,6 +168,22 @@
     <hint type="destinationlabel">
      <x>222</x>
      <y>70</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>inKelv</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>outKelv</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>338</x>
+     <y>208</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>338</x>
+     <y>94</y>
     </hint>
    </hints>
   </connection>
